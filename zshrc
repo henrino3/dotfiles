@@ -5,8 +5,7 @@
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="clean"
-
+ZSH_THEME="bira"
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -82,3 +81,72 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+
+#my aliases
+alias gt_loc="cd /var/www/html"
+alias fx_loc="sudo chmod -R a+rwx /var/www/"
+alias my_sql="sudo mysql -u root -p"
+alias hogwarts="cd /media/henry/hogwarts/"
+alias hogwartsd="cd /media/henry/hogwarts/henry/downloads"
+alias gt_old="cd /media/henry/hogwarts/henry/Bible/Old"
+alias gt_new="cd /media/henry/hogwarts/henry/Bible/New"
+alias gt_drive_user='cd /media/henry/A52E1977EF1E212C/Users/technomaniac/'
+alias gt_drive="cd /media/henry/A52E1977EF1E212C/"
+alias nodeschool="cd /media/henry/hogwarts/Nodejs/Nodeschool/"
+alias javascriptin="cd /media/henry/hogwarts/Nodejs/Nodeschool/javascripting"
+alias path="pantheon-files"
+alias gm="cd ~/genymotion && ./genymotion"
+alias hs="hillsong"
+alias rm="rm -R"
+alias c.="cd ../"
+alias c...="../../"
+alias s="subl"
+alias h="sudo pm-hibernate"
+alias wget="wget -c"
+alias rainbow='yes "$(seq 231 -1 16)" | while read i; do printf "\x1b[48;5;${i}m\n"; sleep .02; done'
+alias pretty="/usr/bin/python -m json.tool | /usr/local/bin/pygmentize -O style=monokai -f console256 -g"
+alias install="sudo apt-fast install"
+alias subladmin="sudo subl"
+alias repo="sudo add-apt-repository"
+alias upd="sudo apt-get update"
+alias brc="sudo subl ~/.bashrc"
+alias angular="gt_loc && cd a && cd angular-phonecat"
+alias npm="sudo npm"
+alias tech=" cd ~/Documents/MEST/Tech/"
+alias downloads="cd ~/Downloads"
+alias docs="cd ~/Documents"
+alias apt-get="apt-fast"
+alias serverails="rails server"
+alias gtrails="cd ~/Documents/RubyonRails"
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+
+
+#MY SYSTEM PATHS
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH=usr/lib/ant/bin:/usr/lib/jvm/java-8-openjdk-amd64/jre/bin:$PATH
+# export JAVA_HOME=/usr/lib/jvm/default-java
+export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
+export PATH=/home/henry/adt/sdk:$PATH
+export PATH=/home/henry/adt/sdk/tools:$PATH
+export PATH=/home/henry/adt/sdk/platform-tools:$PATH
+export PATH=/bin:$PATH
+export PATH=/home/henry/idea/bin/:$PATH
+export PATH=ANDROID_HOME/tools:$PATH
+export PATH=ANDROID_HOME/platform-tools:$PATH
+export PATH="~/android-studio/bin/:$PATH"
+
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
+alias ls='ls -GFh'
+
+# sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get autoremoveexport PATH="$HOME/.rbenv/bin:$PATH"
+ export PATH="$HOME/.rbenv/bin:$PATH"
+ eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
