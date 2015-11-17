@@ -5,7 +5,9 @@
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="bira"
+ZSH_THEME="agnoster"
+
+#ZSH_THEME="candy"
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -26,7 +28,7 @@ ZSH_THEME="bira"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -52,7 +54,7 @@ plugins=(git)
 
 # User configuration
 
-  export PATH="/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/home/bubu/.rvm/bin"
+export PATH="/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/home/henry/.rvm/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -61,17 +63,17 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+ if [[ -n $SSH_CONNECTION ]]; then
+   export EDITOR='vim'
+ else
+   export EDITOR='vim'
+ fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+ export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -95,7 +97,7 @@ alias gt_drive_user='cd /media/henry/A52E1977EF1E212C/Users/technomaniac/'
 alias gt_drive="cd /media/henry/A52E1977EF1E212C/"
 alias nodeschool="cd /media/henry/hogwarts/Nodejs/Nodeschool/"
 alias javascriptin="cd /media/henry/hogwarts/Nodejs/Nodeschool/javascripting"
-alias path="pantheon-files"
+alias pf="pantheon-files"
 alias gm="cd ~/genymotion && ./genymotion"
 alias hs="hillsong"
 alias rm="rm -R"
@@ -119,6 +121,30 @@ alias docs="cd ~/Documents"
 alias apt-get="apt-fast"
 alias serverails="rails server"
 alias gtrails="cd ~/Documents/RubyonRails"
+alias localhost="http://localhost"
+alias localr="http://localhost:3000"
+alias r="railsi"
+alias sz="du -sh"
+alias gtbootstrap="cd ~/Documents/MEST/Tech/libraries/bootstrap-master/"
+alias ms="mux start"
+alias gpom="git push origin master"
+alias brails="bin/rails"
+alias brake="bin/rake"
+alias bbundle="bin/bundle install"
+alias seee=" 2> error.txt && subl error.txt"
+alias seea=" 2&1> error.txt && subl error.txt"
+
+# aliases for Tmux
+ alias tmux='tmux -2'
+ alias ta='tmux attach -t'
+ alias tnew='tmux new -s'
+ alias tls='tmux ls'
+ alias tkill='tmux kill-session -t'
+
+ # convenience aliases for editing configs
+ alias ev='vim ~/.vimrc'
+ alias et='vim ~/.tmux.conf'
+ alias ez='vim ~/.zshrc'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -140,13 +166,23 @@ export PATH=ANDROID_HOME/tools:$PATH
 export PATH=ANDROID_HOME/platform-tools:$PATH
 export PATH="~/android-studio/bin/:$PATH"
 
+
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 alias ls='ls -GFh'
 
 # sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get autoremoveexport PATH="$HOME/.rbenv/bin:$PATH"
- export PATH="$HOME/.rbenv/bin:$PATH"
- eval "$(rbenv init -)"
-export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+# export PATH="$HOME/.rbenv/bin:$PATH"
+# eval "$(rbenv init -)"
+# export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  ]]
+
+
+
+
+#export GEM_PATH='/home/henry/.rbenv/versions/2.3.3/lib/'
+
+# tmuxinator
+#TMUX_COMPLETION_PATH=$(ruby -e "print Gem.bin_path('tmuxinator', 'tmuxinator_completion', '>= 0')" 2> "/dev/null") 
+# [[ -s "$TMUX_COMPLETION_PATH" ]] && source "$TMUX_COMPLETION_PATH" ]
